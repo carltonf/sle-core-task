@@ -1,0 +1,45 @@
+* Current Status
+** DONE First Level Filtering
+
+Filter out packages without non-meaningful and code-level differences, i.e. only
+the timestamp, committers or whitespace are different in change logs.
+
+*Current Status*: almost all non-identical packages should have maintainers
+involved. (413, ~80%).
+
+| Type                   | Num. |    Per. |
+|------------------------+------+---------|
+| Analyzed Pkgs          |  517 | 100.00% |
+|------------------------+------+---------|
+| Pkgs "identical"       |  104 |  20.12% |
+| Pkgs with "real" diffs |  398 |  76.98% |
+| Pkgs only in SLE       |    4 |   0.77% |
+| Kernel Diffs           |   11 |   2.13% |
+|------------------------+------+---------|
+| (Total)                |  517 | 100.00% |
+#+TBLFM: @7$2=vsum(@3..@6)::$3=100*($2/@2$2);%.2f%%::@7$3=100*vsum(@3..@6);%.2f%%
+
+- [[with-meaningful-diffs-pkgs.lst]]
+- [[identical-pkgs.lst]]
+
+*** TODO Pkgs only in SLE
+
+Name changed or package dropped.
+
+*** Kernel Diffs
+
+Kernel diffs are very large (>20MB, with =kernel-firmware= as the only
+exceptions). All of them require special considerations.
+
+* Extra Notes
+- The web page of rdiff is erroneous.
+  Just take a look at the tarball changes in =Botan= at [[https://build.suse.de/package/rdiff/SUSE:SLE-12:GA/Botan?oproject%3DopenSUSE.org:openSUSE:Factory][here]].
+
+- There is a reference to [[https://build.suse.de/project/show/openSUSE.org][openSUSE.org]] within https://build.suse.de
+  
+  But the opposite is not true. The project at
+  https://build.opensuse.org/project/show/SUSE:SLE-12:GA seems to be outdated.
+
+* DONE-List
+** DirectFB
+- Different versions, but patches seem to be adapted to new versions.
