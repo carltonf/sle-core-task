@@ -1,4 +1,6 @@
-* Current Status
+I'm currently working on conflict packages.
+
+* Status
 ** DONE First Level Filtering
 
 Filter out packages without non-meaningful and code-level differences, i.e. only
