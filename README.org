@@ -1,4 +1,6 @@
-I'm currently working on conflict packages.
+SLE Core Task: cxiong(Carl Xiong)
+
+[2015-02-03 Tue] I'm currently working on conflict packages.
 
 * Status
 ** DONE First Level Filtering
@@ -26,14 +28,37 @@ involved. (413, ~80%).
 
 *** TODO Pkgs only in SLE
 
-Name changed or package dropped.
+Name changed or package dropped. (Detailed review needed)
+
+- yast2-all-packages
+- rubygem-ohai
+- device-mapper
+- puppet
 
 *** Kernel Diffs
 
 Kernel diffs are very large (>20MB, with =kernel-firmware= as the only
 exceptions). All of them require special considerations.
 
+- kernel-ec2
+- kernel-vanilla
+- kernel-obs-build
+- kernel-docs
+- kernel-default
+- kernel-obs-qa
+- kernel-syms
+- kernel-firmware
+- kernel-source
+- kernel-xen
+- kernel-debug
+
+
 * Extra Notes
+- Tags are missing from patches
+  
+  Contrary to my presumption, few patches have tags. (But I haven't gone through
+  comments yet).
+
 - The web page of rdiff is erroneous.
   Just take a look at the tarball changes in =Botan= at [[https://build.suse.de/package/rdiff/SUSE:SLE-12:GA/Botan?oproject%3DopenSUSE.org:openSUSE:Factory][here]].
 
